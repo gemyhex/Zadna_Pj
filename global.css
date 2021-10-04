@@ -78,3 +78,7 @@ button:hover {
   width: 50%;
   margin: 0 10px;
 }
+[dir="ltr"] h4 ,
+[dir="ltr"] a {
+  text-align: left;
+}
