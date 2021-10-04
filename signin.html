@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>زادنا</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuery.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mx-4" href="/">
+          <img src="logo1.svg" />
+        </a>
+        <div class="small_cont d-flex">
+          <select class="langSelect">
+            <option>English</option>
+            <option>Arabic</option>
+          </select>
+          <a class="user_options nav-link" href="index.html"
+            ><i class="bi bi-person-circle px-2"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-bs-controls="navbarNav"
+            aria-bs-expanded="false"
+            aria-bs-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse px-lg-5" id="navbarNav">
+          <ul class="navbar-nav" style="opacity: 0">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">الرئيسية</a>
+              <!-- <a href="/home">{{ $t("navigation.home") }}</a> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">التقارير</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">إعدادات عامة</a>
+            </li>
+          </ul>
+          <div class="login_btn text-center">
+            <a href="signin.html">تسجيل الدخول</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="home" style="min-height: calc(100vh - 105px)">
+      <div class="container-fluid sign_in_container p-0">
+        <img src="signinback.png" alt="" />
+        <div class="overlay">
+          <div class="container">
+            <div class="row login_container m-2 m-lg-5">
+              <div class="col-lg-6 col-md-12 login_p p-5">
+                <div class="login_content p-lg-5 p-md-4">
+                  <div class="heading">
+                    <h4 class="">تسجيل الدخول</h4>
+                  </div>
+                  <div class="fields mt-4">
+                    <label for="email_field">البريد الالكتروني *</label>
+                    <input class="form-control mt-2 mb-4" type="text" />
+                    <label for="password_field">كلمة المرور *</label>
+                    <input class="form-control mt-2" type="password" />
+                  </div>
+                  <div class="remrmber mt-3">
+                    <input
+                      type="checkbox"
+                      name="remember_me"
+                      id="remember_me"
+                    />
+                    <router-link to="">هل نسيت كلمة المرور؟</router-link>
+                  </div>
+                  <div class="login_btn mt-3 text-center">
+                    <button>تسجيل الدخول</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 d-none d-lg-block login_pp p-0">
+                <img src="signin_div.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer text-center">
+      <p>جميع الحقوق محفوظة لمؤسسة زادنا</p>
+    </div>
+  </body>
+</html>

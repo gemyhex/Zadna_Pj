@@ -1,0 +1,2694 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>زادنا</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuery.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mx-4" href="index.html">
+          <img src="logo1.svg" />
+        </a>
+        <div class="small_cont d-flex">
+          <select class="langSelect">
+            <option>English</option>
+            <option>Arabic</option>
+          </select>
+          <a class="user_options nav-link" href="signin.html"
+            ><i class="bi bi-person-circle px-2"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-bs-controls="navbarNav"
+            aria-bs-expanded="false"
+            aria-bs-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse px-lg-5" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">الرئيسية</a>
+              <!-- <a href="/home">{{ $t("navigation.home") }}</a> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">التقارير</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">إعدادات عامة</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item d-none d-lg-block">
+              <select class="langSelect">
+                <option>English</option>
+                <option>العربية</option>
+              </select>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link" href="signin.html"
+                ><i class="bi bi-person-circle px-2"></i
+              ></a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link px-3" href="#"><i class="bi bi-bell"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid menu_container p-0">
+      <div class="menu_nav px-3">
+        <div class="menu_sec">
+          <a href="./squares.html">
+            <img src="growth.svg" alt="" />
+            <span>عمليات زراعية</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="stock.html">
+            <img src="store.svg" alt="" />
+            <span>المخزن</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="experiments.html">
+            <img src="test.svg" alt="" />
+            <span>تجارب</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="faults.html">
+            <img src="damages.svg" alt="" />
+            <span>الأعطال</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="crews.html">
+            <img src="crew.svg" alt="" />
+            <span>طاقم العمل</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="missions.html">
+            <img src="mission_assignment.svg" alt="" />
+            <span>المهام</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="costs.html">
+            <img src="money.svg" alt="" />
+            <span>تكاليف</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="seasons.html">
+            <img src="sessons.svg" alt="" />
+            <span>مواسم</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="diseases.html">
+            <img src="diseases.svg" alt="" />
+            <span>الأمراض</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="home">
+      <div class="container-fluid p-0">
+        <div class="tabs">
+          <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'users')">
+              المستخدمين
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'permissions')">
+              الصلاحيات
+            </button>
+          </div>
+
+          <div id="users" class="tabcontent" style="display: block">
+            <div class="container">
+              <div class="row pt-5">
+                <div class="col-6 mx-5">
+                  <button
+                    class="addWorker"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addUser"
+                  >
+                    إضافة مستخدم
+                  </button>
+                </div>
+              </div>
+              <div class="row mt-3" id="printArea">
+                <table
+                  class="
+                    crew_info
+                    text-center
+                    table table-responsive
+                    w-100
+                    d-block d-md-table
+                  "
+                  style="max-width: 100%"
+                >
+                  <thead>
+                    <tr>
+                      <th>الاسم</th>
+                      <th>الوظيفة</th>
+                      <th>تاريخ التعيين</th>
+                      <th>العمليات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>admin</td>
+                      <td>ادمن رئيسي</td>
+                      <td>2021-09-08</td>
+                      <td>
+                        <a
+                          class="viewData"
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#editUser"
+                        >
+                          <i class="bi bi-pencil-square"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div id="permissions" class="tabcontent">
+            <div class="container">
+              <div class="row p-5">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        الرئيسية
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الرئيسية</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="general"
+                                class="form-check-input"
+                              />
+                              <label for="general"
+                                >مشاهده التقارير العامه</label
+                              >
+                            </div>
+                            <div class="pt-4">
+                              <input
+                                type="checkbox"
+                                id="day"
+                                class="form-check-input"
+                              />
+                              <label for="day">مشاهده التقارير اليوميه</label>
+                            </div>
+                            <div class="pt-4">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        الاعدادات العامة
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الإعدادات العامة</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">المحصول</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">مربعات</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">توقيع المربعات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">خريطة الارض</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">اصول ثابتة</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">خامات</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">معدات</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده الصيانه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة الصيانه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">حذف الصيانه</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الآبار</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده الصيانه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة الصيانه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">حذف الصيانه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">توقيع الآبار </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">خريطه الارض</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده المواصفات الفنيه</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">شبكة الرى</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده الصيانه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة الصيانه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">حذف الصيانه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">توقيع شيكه الرى </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده المحبس</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">المستخدمين</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافه وتعديل الصلاحيات</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        عمليات زراعية
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">عمليات زراعيه</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">توقيع الآبار</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">توقيع المربع</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">توقيع شبكه الرى</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">تجهيز الجوره</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">عمليات الغرس</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده خطه الرى</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">إضافه لخطه الرى</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مسح من خطه الرى</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الكيب</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الرى</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">التسميد</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الوقايه</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">فصل الفسائل</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الحصاد</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">عمليات مستديمة</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="true"
+                        aria-controls="collapseFour"
+                      >
+                        طاقم العمل
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">طاقم العمل</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">مؤقت</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الملاحظات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">عمليات سابقة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">فصل واسترجاع مستخدم</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">دائم</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الملاحظات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">عمليات سابقة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">فصل واسترجاع مستخدم</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        المخزن
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">المخزن</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">رصيد المخزن</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار العمليات</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">المطلوب من المخزن</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الموافقة علي الطلبات</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">اوامر التوريد</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        التجارب
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingSix"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">التجارب</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار خطوات التنفيذ</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">التحكم في خطوات التنفيذ</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven"
+                        aria-expanded="true"
+                        aria-controls="collapseSeven"
+                      >
+                        الاعطال
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSeven"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingSeven"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الاعطال</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تغيير حالة العطل</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseEight"
+                        aria-expanded="false"
+                        aria-controls="collapseEight"
+                      >
+                        المهمات
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseEight"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingEight"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">تعيين مهمه</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">ايقاف المهمة</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNine"
+                        aria-expanded="false"
+                        aria-controls="collapseNine"
+                      >
+                        التكاليف
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseNine"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingNine"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">التكاليف</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">تكلفه المربع</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page"
+                                >اظهار تكلفة النخلة الواحدة</label
+                              >
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار التفاصيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">التكلفه العامه</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار التفاصيل </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTen">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTen"
+                        aria-expanded="true"
+                        aria-controls="collapseTen"
+                      >
+                        المواسم
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTen"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTen"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">المواسم</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الموسم القادم</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الموسم الحالى</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الموسم السابق</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEleven">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseEleven"
+                        aria-expanded="false"
+                        aria-controls="collapseEleven"
+                      >
+                        الأمراض
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseEleven"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingEleven"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الأمراض</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">إضافه مرض جديد</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده تتبع المرض</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">إضافه تتبع المرض </label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">مشاهده خطه مكافحه المرض</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">إضافه خطه مكافحه المرض</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">الامراض الحاليه</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اضافة</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">تعديل</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">سجل الامراض</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اظهار بيانات</label>
+                            </div>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">سجل الفاقد</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">الدخول على الصفحه</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">بحث</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">اخراج ملف اكسيل</label>
+                            </div>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="page"
+                                class="form-check-input"
+                              />
+                              <label for="page">إظهار أسباب الفقد</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwelve">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwelve"
+                        aria-expanded="false"
+                        aria-controls="collapseTwelve"
+                      >
+                        التقارير
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwelve"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwelve"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-6 col-sm-12">
+                            <input
+                              type="checkbox"
+                              id="all"
+                              class="form-check-input"
+                            />
+                            <label for="all">الكل</label>
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <h6 class="mb-3">التقارير</h6>
+                            <div class="">
+                              <input
+                                type="checkbox"
+                                id="general"
+                                class="form-check-input"
+                              />
+                              <label for="general">الدخول علي الصفحه</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-5 mb-5">
+                <div class="col-12 mt-4">
+                  <button
+                    class="addRow"
+                    data-bs-toggle="modal"
+                    data-bs-target="#saveModel"
+                  >
+                    حفظ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modeel For Add user -->
+        <div
+          class="modal fade"
+          id="addUser"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <form action="">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">الاسم: </label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">نوع المستخدم: </label>
+                      <select class="form-select">
+                        <option selected disabled>اختر</option>
+                        <option>مؤقت</option>
+                        <option>دائم</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">الوظيفة: </label>
+                      <select class="form-select">
+                        <option selected disabled>اختر</option>
+                        <option>ادمن رئيسي</option>
+                        <option>استشاري</option>
+                        <option>مهندس</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">تاريخ التعيين: </label>
+                      <input type="date" class="form-control" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">البريد الاكتروني: </label>
+                      <input type="email" class="form-control" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">كلمة المرور: </label>
+                      <input type="password" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="addRow"
+                    data-bs-toggle="modal"
+                    data-bs-target="#saveModel"
+                  >
+                    حفظ
+                  </button>
+                  <button class="" data-bs-dismiss="modal">إلغاء</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Modeel For Edit Valve -->
+        <div
+          class="modal fade"
+          id="editUser"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <form action="">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">الاسم: </label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">نوع المستخدم: </label>
+                      <select class="form-select">
+                        <option selected disabled>اختر</option>
+                        <option>مؤقت</option>
+                        <option>دائم</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">الوظيفة: </label>
+                      <select class="form-select">
+                        <option selected disabled>اختر</option>
+                        <option>ادمن رئيسي</option>
+                        <option>استشاري</option>
+                        <option>مهندس</option>
+                      </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">تاريخ التعيين: </label>
+                      <input type="date" class="form-control" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">البريد الاكتروني: </label>
+                      <input type="email" class="form-control" />
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mt-4">
+                      <label for="">كلمة المرور: </label>
+                      <input type="password" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="submit"
+                    class="addRow"
+                    data-bs-toggle="modal"
+                    data-bs-target="#saveModel"
+                  >
+                    حفظ
+                  </button>
+                  <button class="" data-bs-dismiss="modal">إلغاء</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Save Form -->
+        <div
+          class="modal fade modal_success"
+          id="saveModel"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row text-center">
+                  <div class="col-12">
+                    <i class="bi bi-check-circle-fill submit"></i>
+                  </div>
+                  <div class="col-12">
+                    <p class="submit">تم الحفظ بنجاح</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a
+                  href="#"
+                  class="btn-danger close_modal"
+                  data-bs-dismiss="modal"
+                >
+                  إغلاق
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer text-center">
+      <p>جميع الحقوق محفوظة لمؤسسة زادنا</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="printThis.js"></script>
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>

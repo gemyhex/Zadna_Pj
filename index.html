@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>زادنا</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuery.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mx-4" href="/">
+          <img src="logo1.svg" />
+        </a>
+        <div class="small_cont d-flex">
+          <select class="langSelect">
+            <option value="en">English</option>
+            <option value="ar" selected>العربية</option>
+          </select>
+          <a class="user_options nav-link" href="/login"
+            ><i class="bi bi-person-circle px-2"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-bs-controls="navbarNav"
+            aria-bs-expanded="false"
+            aria-bs-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse px-lg-5" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">الرئيسية</a>
+              <!-- <a href="/home">{{ $t("navigation.home") }}</a> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">التقارير</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">إعدادات عامة</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item d-none d-lg-block">
+              <select class="langSelect">
+                <option value="en">English</option>
+                <option value="ar" selected>العربية</option>
+              </select>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link" href="/login"
+                ><i class="bi bi-person-circle px-2"></i
+              ></a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link px-3" href="#"><i class="bi bi-bell"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid menu_container p-0">
+      <div class="menu_nav px-3">
+        <div class="menu_sec">
+          <a href="squares.html">
+            <img src="growth.svg" alt="" />
+            <span>عمليات زراعية</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="stock.html">
+            <img src="store.svg" alt="" />
+            <span>المخزن</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="experiments.html">
+            <img src="test.svg" alt="" />
+            <span>تجارب</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="faults.html">
+            <img src="damages.svg" alt="" />
+            <span>الأعطال</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="pages/crews.html">
+            <img src="crew.svg" alt="" />
+            <span>طاقم العمل</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="missions.html">
+            <img src="mission_assignment.svg" alt="" />
+            <span>المهمات</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="costs.html">
+            <img src="money.svg" alt="" />
+            <span>تكاليف</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="seasons.html">
+            <img src="sessons.svg" alt="" />
+            <span>مواسم</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="diseases.html">
+            <img src="diseases.svg" alt="" />
+            <span>الأمراض</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="home mb-5 text-center">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 banner">
+            <img src="back1.svg" alt="" />
+            <div class="overlay">
+              <div class="logo">
+                <img src="logo2.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 pt-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3 sign_sec">
+                <img src="egydates.svg" alt="" />
+                <div class="overlay">
+                  <a href="#">الأعطال الحالية</a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-4 mt-3 sign_sec">
+                <img src="dates.svg" alt="" />
+                <div class="overlay">
+                  <a href="#">قسم الواردات</a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-4 mt-3 sign_sec">
+                <img src="palms.svg" alt="" />
+                <div class="overlay">
+                  <a href="#">قسم الصادرات</a>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-4 mt-3 sign_sec">
+                <img src="asoyb.svg" alt="" />
+                <div class="overlay">
+                  <a href="#">الأمراض</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row diseases mt-5">
+          <div class="col-lg-7 col-md-6 col-sm-8 diseases_p">
+            <h4 class="mt-5">الأمراض</h4>
+            <p class="mt-3">
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور. لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+              يسكينج أليايت,سيت دو أيوسمود تيمبور. لوريم ايبسوم دولار سيت أميت
+              ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور. لوريم
+              ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو
+              أيوسمود تيمبور.
+            </p>
+            <button class="mt-3">عرض الأمراض الحالية</button>
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-4 diseases_p">
+            <img src="palm.svg" alt="" />
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row types_dates mt-5 py-lg-5">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-5 mt-lg-1">
+            <div class="logo">
+              <img src="dates_p.svg" alt="" />
+            </div>
+            <p class="mt-3 mb-2">
+              أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور. لوريم ايبسوم دولار سيت
+              أميت ,كونسيكتيتور أدايبا يسكينج أليايت
+            </p>
+            <a href="#">عرض المزيد</a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-5 mt-lg-1">
+            <div class="logo">
+              <img src="dates_pp.svg" alt="" />
+            </div>
+            <p class="mt-3 mb-2">
+              أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور. لوريم ايبسوم دولار سيت
+              أميت ,كونسيكتيتور أدايبا يسكينج أليايت
+            </p>
+            <a href="#">عرض المزيد</a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-5 mt-lg-1 mb-5 mb-lg-0">
+            <div class="logo">
+              <img src="dates_op.svg" alt="" />
+            </div>
+            <p class="mt-3 mb-2">
+              أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور. لوريم ايبسوم دولار سيت
+              أميت ,كونسيكتيتور أدايبا يسكينج أليايت
+            </p>
+            <a href="#">عرض المزيد</a>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5 mb-5 px-5 py-5">
+        <div class="row">
+          <div class="heading">
+            <h5>المهام</h5>
+            <a href="#">
+              <span>عرض مفصل</span>
+              <i class="bi bi-arrow-left"></i>
+            </a>
+          </div>
+          <div class="col-12 report_tabs p-0">
+            <ul class="nav nav-tabs px-5" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#day"
+                  type="button"
+                  role="tab"
+                  aria-controls="day"
+                  aria-selected="true"
+                >
+                  اليومية
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#week"
+                  type="button"
+                  role="tab"
+                  aria-controls="week"
+                  aria-selected="false"
+                >
+                  الاسبوعية
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#month"
+                  type="button"
+                  role="tab"
+                  aria-controls="month"
+                  aria-selected="false"
+                >
+                  الشهرية
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#sesson"
+                  type="button"
+                  role="tab"
+                  aria-controls="sesson"
+                  aria-selected="false"
+                >
+                  الموسمية
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="day"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <div class="row justify-content-center progress_container">
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        aria-valuenow="65"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">تم</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        aria-valuenow="15"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">متأخر</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-danger"
+                        role="progressbar"
+                        aria-valuenow="20"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">لم يتم</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="week"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <div class="row justify-content-center progress_container">
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">تم</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">متأخر</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-danger"
+                        role="progressbar"
+                        aria-valuenow="35"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">لم يتم</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="month"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <div class="row justify-content-center progress_container">
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        aria-valuenow="44"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">تم</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        aria-valuenow="11"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">متأخر</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-danger"
+                        role="progressbar"
+                        aria-valuenow="27"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">لم يتم</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="sesson"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <div class="row justify-content-center progress_container">
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        aria-valuenow="67"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">تم</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        aria-valuenow="30"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">متأخر</span>
+                  </div>
+                  <div class="col-8 progress_c">
+                    <span id="progress_val"></span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar bg-danger"
+                        role="progressbar"
+                        aria-valuenow="3"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <span class="progress_title">لم يتم</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid mt-5">
+        <div class="row info p-5">
+          <div class="col-lg-8 col-md-8 info_p">
+            <p>
+              دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود
+              تيمبور. لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج
+              أليايت,سيت دو أيوسمود تيمبور. لوريم ايبسوم دولار سيت أميت دولار
+              سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور.
+              لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت
+              دو أيوسمود تيمبور. لوريم ايبسوم دولار سيت أميت
+            </p>
+            <button class="mt-2">عرض المزيد</button>
+          </div>
+          <div class="col-lg-3 col-md-3 info_p d-none d-lg-block d-md-block">
+            <img src="plamss.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-5 operations_cards px-5 justify-content-center">
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-5 cards_container">
+            <div class="card py-4">
+              <h6>عمليات الغرس</h6>
+              <p class="numb" style="color: #50a15e">23</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-5 cards_container">
+            <div class="card py-4">
+              <h6>عمليات الري</h6>
+              <p class="numb" style="color: #4879b9">40</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-5 cards_container">
+            <div class="card py-4">
+              <h6>عمليات التسميد</h6>
+              <p class="numb" style="color: #ee892c">48</p>
+            </div>
+          </div>
+          <div
+            class="col-12 mt-4 mt-lg-0 cards_container d-none d-lg-block"
+          ></div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-5 cards_container">
+            <div class="card py-4">
+              <h6>عمليات الوقاية</h6>
+              <p class="numb" style="color: #c95656">13</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-5 cards_container">
+            <div class="card py-4">
+              <h6>عمليات مستديمة</h6>
+              <p class="numb" style="color: #4a352a">3</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 mt-5 cards_container">
+            <div class="card py-4">
+              <h6>عمليات الحصاد</h6>
+              <p class="numb" style="color: #34613c">25</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer text-center">
+      <p>جميع الحقوق محفوظة لمؤسسة زادنا</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

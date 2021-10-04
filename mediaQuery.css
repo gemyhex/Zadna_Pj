@@ -1,0 +1,100 @@
+/* navbar */
+@media screen and (min-width: 992px) {
+    .small_cont .langSelect {
+        display: none;
+    }
+
+    .small_cont .user_options {
+        display: none;
+    }
+}
+
+/* menu */
+@media screen and (max-width: 1200px) {
+    .menu_sec {
+        width: fit-content;
+    }
+}
+
+/* home page */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .cards_container .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cards_container .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .diseases_p p {
+        width    : 100%;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .diseases_p p {
+        width    : 100%;
+        font-size: 1rem;
+    }
+
+    .info .info_p p {
+        width: 100%;
+    }
+    .stock_container .stock_btn {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .stock_container .stock_btn {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 992px) {
+    .stock_container .stock_btn {
+        width: 50%;
+    }
+}
+
+/* crews page */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .modal-dialog {
+        max-width: 550px;
+    }
+}
+@media screen and (min-width: 768px){
+    .modal-dialog {
+        max-width: 750px !important;
+    }
+}
+
+/* print table  */
+@media print {
+    .table tr th:last-child {
+        display: none;
+    }
+    .table tr td:last-child {
+        display: none;
+    }
+    .table {
+        width: 100%;
+    }
+    .table tr th {
+        width: 100vw;
+        background: #d6ab77;
+    }
+    .table tbody tr:nth-child(odd) {
+        background: #efe7dc;
+    }
+}
+
+/* stock balance page */
+@media screen and (max-width: 992px) {
+    .addWorker {
+        width: 90%!important;
+    }
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>زادنا</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuery.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mx-4" href="index.html">
+          <img src="logo1.svg" />
+        </a>
+        <div class="small_cont d-flex">
+          <select class="langSelect">
+            <option>English</option>
+            <option>Arabic</option>
+          </select>
+          <a class="user_options nav-link" href="signin.html"
+            ><i class="bi bi-person-circle px-2"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-bs-controls="navbarNav"
+            aria-bs-expanded="false"
+            aria-bs-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse px-lg-5" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">الرئيسية</a>
+              <!-- <a href="/home">{{ $t("navigation.home") }}</a> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">التقارير</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">إعدادات عامة</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item d-none d-lg-block">
+              <select class="langSelect">
+                <option>English</option>
+                <option>العربية</option>
+              </select>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link" href="signin.html"
+                ><i class="bi bi-person-circle px-2"></i
+              ></a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link px-3" href="#"><i class="bi bi-bell"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid menu_container p-0">
+      <div class="menu_nav px-3">
+        <div class="menu_sec">
+          <a href="./squares.html">
+            <img src="growth.svg" alt="" />
+            <span>عمليات زراعية</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="stock.html">
+            <img src="store.svg" alt="" />
+            <span>المخزن</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="experiments.html">
+            <img src="test.svg" alt="" />
+            <span>تجارب</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="faults.html">
+            <img src="damages.svg" alt="" />
+            <span>الأعطال</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="crews.html">
+            <img src="crew.svg" alt="" />
+            <span>طاقم العمل</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="missions.html">
+            <img src="mission_assignment.svg" alt="" />
+            <span>المهام</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="costs.html">
+            <img src="money.svg" alt="" />
+            <span>تكاليف</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="seasons.html">
+            <img src="sessons.svg" alt="" />
+            <span>مواسم</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="diseases.html">
+            <img src="diseases.svg" alt="" />
+            <span>الأمراض</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="home">
+      <div class="container">
+        <div class="row pt-5">
+          <div class="col-6 mx-5">
+            <button
+              class="addWorker"
+              data-bs-toggle="modal"
+              data-bs-target="#addexperiment"
+            >
+              إضافة تجربة
+            </button>
+          </div>
+        </div>
+        <div class="row filtering-options mt-4">
+          <div class="col-lg-3 col-md-4 col-sm-12 mt-2">
+            <label for="">النوع: </label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>الكل</option>
+              <option value="1">نوع</option>
+            </select>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-12 mt-2">
+            <label>الإسم: </label>
+            <input
+              id="txt_searchall"
+              type="search"
+              class="form-control"
+            />
+          </div>
+          <div class="col-lg-6 col-md-4 col-sm-12 mt-2">
+            <button class="print-btn">طباعة</button>
+          </div>
+        </div>
+        <div class="row mt-3" id="printArea">
+          <table
+            class="
+              crew_info
+              text-center
+              table table-responsive
+              w-100
+              d-block d-md-table
+            "
+            style="max-width: 100%"
+          >
+            <thead>
+              <tr>
+                <th>الكود</th>
+                <th>النوع</th>
+                <th>الاسم</th>
+                <th>كود المربع</th>
+                <th>تاريخ الانشاء</th>
+                <th>موعد التنفيذ</th>
+                <th>تعديل</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>تمر</td>
+                <td>خيرات</td>
+                <td>23</td>
+                <td>19/08/2021</td>
+                <td>19/08/2021</td>
+                <td>
+                  <button
+                    class="viewData"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editExperiment"
+                  >
+                    <i class="bi bi-pencil-square"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Modeel For Add Balance -->
+        <div
+          class="modal fade"
+          id="addexperiment"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">الاسم: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">النوع: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">تاريخ الانشاء: </label>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">موعد التنفيذ: </label>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">كود المربع: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">عدد النخلات: </label>
+                    <input type="number" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">المسؤل: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">نسبة النجاح: </label>
+                    <input type="number" class="form-control" />
+                  </div>
+                  <div class="col-12 mt-2">
+                    <label for="">وصف التجربة: </label>
+                    <textarea class="form-control"></textarea>
+                  </div>
+                  <div class="col-12 mt-2">
+                    <label for="">ملاحظات: </label>
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="addRow">حفظ</button>
+                <button type="button" class="" data-bs-dismiss="modal">
+                  إلغاء
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modeel For Edit Balance -->
+        <div
+          class="modal fade"
+          id="editExperiment"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">الاسم: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">النوع: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">تاريخ الانشاء: </label>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">موعد التنفيذ: </label>
+                    <input type="date" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">كود المربع: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">عدد النخلات: </label>
+                    <input type="number" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">المسؤل: </label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 mt-2">
+                    <label for="">نسبة النجاح: </label>
+                    <input type="number" class="form-control" />
+                  </div>
+                  <div class="col-12 mt-2">
+                    <label for="">وصف التجربة: </label>
+                    <textarea class="form-control"></textarea>
+                  </div>
+                  <div class="col-12 mt-2">
+                    <label for="">ملاحظات: </label>
+                    <textarea class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="addRow">حفظ</button>
+                <button type="button" class="" data-bs-dismiss="modal">
+                  إلغاء
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer text-center">
+      <p>جميع الحقوق محفوظة لمؤسسة زادنا</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="printThis.js"></script>
+  </body>
+</html>

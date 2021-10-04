@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>زادنا</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuery.css" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand mx-4" href="index.html">
+          <img src="logo1.svg" />
+        </a>
+        <div class="small_cont d-flex">
+          <select class="langSelect">
+            <option>English</option>
+            <option>Arabic</option>
+          </select>
+          <a class="user_options nav-link" href="signin.html"
+            ><i class="bi bi-person-circle px-2"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-bs-controls="navbarNav"
+            aria-bs-expanded="false"
+            aria-bs-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse px-lg-5" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">الرئيسية</a>
+              <!-- <a href="/home">{{ $t("navigation.home") }}</a> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">التقارير</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">إعدادات عامة</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item d-none d-lg-block">
+              <select class="langSelect">
+                <option>English</option>
+                <option>العربية</option>
+              </select>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link" href="signin.html"
+                ><i class="bi bi-person-circle px-2"></i
+              ></a>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <a class="nav-link px-3" href="#"><i class="bi bi-bell"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid menu_container p-0">
+      <div class="menu_nav px-3">
+        <div class="menu_sec">
+          <a href="./squares.html">
+            <img src="growth.svg" alt="" />
+            <span>عمليات زراعية</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="stock.html">
+            <img src="store.svg" alt="" />
+            <span>المخزن</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="experiments.html">
+            <img src="test.svg" alt="" />
+            <span>تجارب</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="faults.html">
+            <img src="damages.svg" alt="" />
+            <span>الأعطال</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="crews.html">
+            <img src="crew.svg" alt="" />
+            <span>طاقم العمل</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="missions.html">
+            <img src="mission_assignment.svg" alt="" />
+            <span>المهام</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="costs.html">
+            <img src="money.svg" alt="" />
+            <span>تكاليف</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="seasons.html">
+            <img src="sessons.svg" alt="" />
+            <span>مواسم</span>
+          </a>
+        </div>
+        <div class="menu_sec">
+          <a href="diseases.html">
+            <img src="diseases.svg" alt="" />
+            <span>الأمراض</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="home">
+      <div class="container">
+        <div class="heading col-12 mt-5">
+          <h3>تعديل بيانات مربع</h3>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <label class="control-label">عدد الصفوف : </label>
+            <input type="number" required="required" class="form-control" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <label class="control-label">عدد الاعمدة : </label>
+            <input type="number" required="required" class="form-control" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <label class="control-label">مساحة المربع : </label>
+            <input type="number" required="required" class="form-control" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <label class="control-label">العمال المسئولين : </label>
+            <select class="form-control" multiple>
+              <option value="all">الكل</option>
+              <option value="1">عامل</option>
+              <option value="2">عامل</option>
+              <option value="3">عامل</option>
+              <option value="4">عامل</option>
+            </select>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <label class="control-label">عمال : </label>
+            <input type="text" required="required" class="form-control" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+            <label class="control-label">مشرفين : </label>
+            <input type="text" required="required" class="form-control" />
+          </div>
+        </div>
+        <div class="col-12 form-group mt-4">
+          <div class="row mb-2">
+            <label class="control-label">نقطة 1 : </label>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شمال"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group mt-3 justify-content-end">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شرق"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group mt-4">
+          <div class="row mb-2">
+            <label class="control-label">نقطة 2 : </label>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شمال"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group mt-3 justify-content-end">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شرق"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group mt-4">
+          <div class="row mb-2">
+            <label class="control-label">نقطة 3 : </label>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شمال"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group mt-3 justify-content-end">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شرق"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group mt-4">
+          <div class="row mb-2">
+            <label class="control-label">نقطة 4 : </label>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شمال"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 form-group mt-3 justify-content-end">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="شرق"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="درجة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="دقيقة"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <input
+                type="text"
+                required="required"
+                class="form-control"
+                placeholder="ثانية"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4 mb-5">
+          <div class="col-6">
+            <button
+              class="addFarm"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              حفظ
+            </button>
+          </div>
+        </div>
+
+        <!-- Modal Save Form -->
+        <div
+          class="modal fade modal_success"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row text-center">
+                  <div class="col-12">
+                    <i class="bi bi-check-circle-fill submit"></i>
+                  </div>
+                  <div class="col-12">
+                    <p class="submit">تم الحفظ بنجاح</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a
+                  href="#"
+                  class="btn-danger close_modal"
+                  data-bs-dismiss="modal"
+                >
+                  إغلاق
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer text-center">
+      <p>جميع الحقوق محفوظة لمؤسسة زادنا</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="printThis.js"></script>
+  </body>
+</html>

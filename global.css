@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+* {
+  outline   : none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  max-width : 100%;
+  max-height: 100%;
+}
+
+button {
+  background : #bb9568;
+  color      : #fff;
+  font-weight: bold;
+  border     : 0;
+}
+
+button:hover {
+  background: #dfb37d;
+}
+
+.overlay {
+  position: absolute;
+  top     : 0;
+  left    : 0;
+  right   : 0;
+  width   : 100%;
+  height  : 100%;
+}
+
+.home {
+  min-height : calc(100vh - 144px);
+  font-family: Cairo;
+}
+
+.inactiveLink {
+  pointer-events: none;
+  cursor        : default;
+}
+.table {
+  margin-top: 2rem;
+  min-width: 100%;
+}
+.table thead tr,
+.table tbody tr {
+  min-width: 100%;
+}
+.table th,
+.table td {
+  min-width: max-content;
+}
+.table tbody{
+  max-height: 700px;
+  overflow: scroll;
+}
+.pagination .page-link {
+  background-color: #bb9568!important;
+  color: #fff!important;
+}
+.page-item.active .page-link {
+  background-color: #dfb37d!important;
+  color: #fff!important;
+  border-color: #dfb37d!important;
+}
+.dataTables_length label,
+.dataTables_filter label {
+  display: flex;
+}
+.dataTables_length label select,
+.dataTables_filter label input {
+  width: 50%;
+  margin: 0 10px;
+}
